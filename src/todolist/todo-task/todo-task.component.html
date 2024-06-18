@@ -1,0 +1,30 @@
+<div class="container border border-dark text-center rounded-3">
+    <div class="row  border border-dark ">
+        <div class="col-1 p-2"></div>
+        <div class="col-6 p-2">Task</div>
+        <div class="col-3 p-2">Status</div>
+        <div class="col-2 p-2">Action</div>
+    </div>
+    @for (item of tasklist; track item.id) {
+        <div class="row border border-dark ">
+
+        <div class="col-1 p-2">
+            <input class="form-check-input rounded-3 border-dark" type="checkbox">
+        </div>
+        <div class="col-6 p-2">
+            <label class="form-label">{{item.tdesc}}</label>
+        </div>
+        <div class="col-3 p-2">
+            <label class="form-label">{{item.status}}</label>
+        </div>
+        <div class="col-2 p-2">
+                <button class="btn btn-danger" (click)="removeToDo(item.id)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                </svg>
+                </button>
+        </div>
+    </div>
+
+    }
+</div>

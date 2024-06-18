@@ -1,0 +1,5 @@
+<div class="container justify-content-center w-50">
+    <app-add-task (add)="addToDo($event)"></app-add-task>
+    <app-filter-task></app-filter-task>
+    <app-todo-task [tasklist]="tasks" (removetask)="removeToDo($event)"></app-todo-task>
+</div>
