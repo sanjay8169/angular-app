@@ -1,0 +1,32 @@
+<div class="container justify-content-center">
+    <div class="row m-3">
+        <div class="col-12">
+            <label class="form-label">Enter Task Description</label>
+            <input class="form-control" type="text" [(ngModel)]="tdesc">
+        </div>
+        <div class="col-12">
+            <label class="form-label">Select Task Priority</label>
+            <select class="form-select" [(ngModel)]="priority">
+                @for (item of priorityoption; track $index) {
+                    <option [value]="item">{{item}}</option>
+                }
+            </select>
+        </div>
+        <div class="col-12">
+            <label class="form-label">Select Task Status</label>
+            <select class="form-select" [(ngModel)]="status">
+                @for (item of statusoption; track $index) {
+                    <option [value]="item">{{item}}</option>
+                }
+            </select>
+            
+        </div>
+    </div>
+    <div class="row justify-content-center text-center">
+        <div class="col">
+            <button class="btn btn-primary" (click)="addtask()">
+                Add
+            </button>
+        </div>
+    </div>
+</div>
